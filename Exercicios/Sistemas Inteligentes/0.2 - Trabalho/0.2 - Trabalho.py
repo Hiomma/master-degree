@@ -5,6 +5,12 @@ def Filter_Array(ds_Filter, nr_Index):
     return list(filter(lambda x: ds_Filter == x[nr_Index], objArrayEstados))
 
 
+def Print_State(objArrayEstados):
+    print('\n')
+    print('O estado que você está pensando é o: {0}'.format(
+        objArrayEstados[0][0]))
+
+
 def Get_Biome_Question():
     print('---------------------------- Biomas ----------------------------\n')
     print('Amazonia')
@@ -42,6 +48,7 @@ def Get_PIB_Question(vl_PIB):
 
 
 def Get_Medium_Value(objArrayEstados):
+    objArrayEstados.sort(key=lambda x: x[5])
     return objArrayEstados[math.ceil(len(objArrayEstados)/2)][5] - 1
 
 
@@ -88,11 +95,10 @@ sn_PIB = Get_PIB_Question(nr_Medium_Vale)
 objArrayEstados = list(filter(lambda x: x[5] > nr_Medium_Vale,  objArrayEstados) if sn_PIB == 'S' else filter(
     lambda x: x[5] < nr_Medium_Vale,  objArrayEstados))
 
-print(len(objArrayEstados))
-
 sn_Litoral = Get_Coast_Question()
 objArrayEstados = Filter_Array(sn_Litoral, 3)
 
 sn_Fronteira = Get_Border_Question()
 objArrayEstados = Filter_Array(sn_Fronteira, 4)
 
+Print_State(objArrayEstados)
