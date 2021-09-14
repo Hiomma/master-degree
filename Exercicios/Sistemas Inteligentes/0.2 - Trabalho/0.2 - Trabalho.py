@@ -1,3 +1,6 @@
+import math
+
+
 def Filter_Array(ds_Filter, nr_Index):
     return list(filter(lambda x: ds_Filter == x[nr_Index], objArrayEstados))
 
@@ -24,6 +27,22 @@ def Get_Climate_Question():
     print('----------------------------------------------------------------\n')
     print('\n')
     return input('Qual é o clima predominante no seu Estado?')
+
+
+def Get_Coast_Question():
+    return input('Por favor, responda com S ou N se o seu estado é litorâneo: ')
+
+
+def Get_Border_Question():
+    return input('Por favor, responda com S ou N se o seu estado é fronteira com algum país: ')
+
+
+def Get_PIB_Question(vl_PIB):
+    return input('O seu estado tem o PIB maior que {0}?'.format(vl_PIB))
+
+
+def Get_Medium_Value(objArrayEstados):
+    return objArrayEstados[math.ceil(len(objArrayEstados)/2)][5] - 1
 
 
 objArrayEstados = [
@@ -58,11 +77,22 @@ objArrayEstados = [
 
 print('Bem-vindo ao Descobridor de Estados, irei fazer algumas perguntas e você me fornece as respostas, assim eu descobrirei de qual estado você está pensando. Vamos lá?')
 
-
 nm_Estado = Get_Biome_Question()
 objArrayEstados = Filter_Array(nm_Estado, 1)
 
 nm_Clima = Get_Climate_Question()
 objArrayEstados = Filter_Array(nm_Clima, 2)
 
+nr_Medium_Vale = Get_Medium_Value(objArrayEstados)
+sn_PIB = Get_PIB_Question(nr_Medium_Vale)
+objArrayEstados = list(filter(lambda x: x[5] > nr_Medium_Vale,  objArrayEstados) if sn_PIB == 'S' else filter(
+    lambda x: x[5] < nr_Medium_Vale,  objArrayEstados))
+
 print(len(objArrayEstados))
+
+sn_Litoral = Get_Coast_Question()
+objArrayEstados = Filter_Array(sn_Litoral, 3)
+
+sn_Fronteira = Get_Border_Question()
+objArrayEstados = Filter_Array(sn_Fronteira, 4)
+
