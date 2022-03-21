@@ -1,0 +1,31 @@
+1 - Problemas multimodais e problemas np hard
+
+2 - Distribuição uniforme
+
+x_i = x_min + rand * x_max * x_min
+
+3 - Distribuição gausina, normal, uniforme
+
+4 - Individuos é os coeficientes do polinomio
+
+Fitness - Somatorio dos erros
+
+erro = 1/m Somatorios (ychapeu - yi)²
+
+minimizacao do erro
+
+5 - Topologia G best - comunica a todos e converge rapidamente a esse ponto. L best - topologia em anel, nesse caso o processo de convergencia é mais lento e é menos suscetivel a cair em minimos locais
+
+Multimodais - LBest
+Unimodal - GBest
+
+6 - d_1 =  alfap1 + 1 - alfap2
+d_2 = 1 - alfap1 + alfap2
+
+7 - Distribuição Gaussiana. Começa com o desvio padrão, quando chega ao zero, significa que não tem mais efeito. 
+
+8 - Fuzzificação - Fuzificação conversão dos valores númericos para fuzzy, entre 0 e 1.
+Banco de regras - Calcula os valores.
+Conversão - Converte de fuzzyficação para escalar
+
+9 -
