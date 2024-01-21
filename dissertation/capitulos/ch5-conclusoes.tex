@@ -1,0 +1,16 @@
+% ==============================================================================
+% TCC - Gabriel dos Santos Sereno
+% Capítulo 5 - Considerações Finais
+% ==============================================================================
+\chapter{Considerações Finais}
+\label{sec-conclusoes}
+
+Neste trabalho foi apresentado um estudo comparativo na área de diagnóstico de falhas em processos industriais, utilizando métodos de seleção de característica em conjunto com a técnica de decomposição One-vs-All e o classificador Random Forest.
+
+A metodologia foi testada em benchmarks utilizados em diversos trabalhos científicos, como o Processo Tennessee Eastman e o Reator-tanque Agitado Contínuo com objetivo de evidenciar a eficacia do método de seleção de característica SHAP sobre os demais, bem como demonstrar que o método pode ser aplicado não somente na área de jogos, mas também na área industrial e acadêmica. Ao decorrer da apresentação do trabalho, evidencia-se que o SHAP obteve um dos melhores desempenhos, selecionando menos característica. Além disso, o SHAP é um algoritmo poderoso e fácil de ser aplicado em classificadores suportados, sem que os dados originais sejam alterados.  
+
+As limitações na identificação apresentadas em algumas falhas ocorreram devido aos algoritmos de seleção escolheram características similares, tanto no Processo Tennesse Eastman e o Reator-tanque Agitado Contínuo. Isso não ocorre devido ao método de seleção, mas pelo classificador. Esse fato evidencia-se na apresentação dos resultados, onde todos os métodos obtiveram pontuações aproximados. 
+
+Portanto, o SHAP demonstra que é capaz de operar além na área de jogos, mas também na área industrial e acadêmica, onde pode ser mais uma opção simples para aumentar a precisão do classificador, bem como explicar as suas decisões através das características que se manifestaram durante a ocorrência da falha. Além disso, o uso de dados se torna mais eficiente, reduzindo a complexidade e tamanho da base dados.
+
+Para o aprimoramento da metodologia, recomenda-se como trabalho futuro utilizar outros tipos de modelo, como técnicas de Deep Learning para prevenir que o classificador tenham dificuldades na identificação onde a base de dados contem classes com características extremamente similares. Além disso, recomenda-se a utilização de outros métodos de seleção de característica para comparação, já que os utilizados neste estudo são classificadores clássicos da literatura, podendo abrangir classificadores mais novos ou criados por outros autores. Para abranger mais o estudo comparativo, pode ser empregado a técnica One-vs-One com objetivo de verificar se houve melhora no desempenho com a técnica mais complexa. Por fim, a metodologia pode ser aplicada a outros benchmarks ou ate mesmo em um problema real para testar a eficacia do algoritmo de uma forma mais ampla.

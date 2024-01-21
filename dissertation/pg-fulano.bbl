@@ -1,0 +1,273 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.7 }
+
+\bibitem[Amiri et al. 2011]{amiri2011mutual}
+\abntrefinfo{Amiri et al.}{AMIRI et al.}{2011}
+{AMIRI, F. et al. Mutual information-based feature selection for intrusion
+  detection systems.
+\emph{Journal of Network and Computer Applications}, Elsevier, v.~34, n.~4, p.
+  1184--1199, 2011.}
+
+\bibitem[Ayodele 2010]{ayodele2010types}
+\abntrefinfo{Ayodele}{AYODELE}{2010}
+{AYODELE, T.~O. Types of machine learning algorithms.
+\emph{New advances in machine learning}, IntechOpen Rijeka, v.~3, p. 19--48,
+  2010.}
+
+\bibitem[Bao-Gang e Yong 2008]{bao2008evaluation}
+\abntrefinfo{Bao-Gang e Yong}{BAO-GANG; YONG}{2008}
+{BAO-GANG, H.; YONG, W. Evaluation criteria based on mutual information for
+  classifications including rejected class.
+\emph{Acta Automatica Sinica}, Elsevier, v.~34, n.~11, p. 1396--1403, 2008.}
+
+\bibitem[Breiman e Cutler 2001]{breiman2001random}
+\abntrefinfo{Breiman e Cutler}{BREIMAN; CUTLER}{2001}
+{BREIMAN, L.; CUTLER, R. Random forests machine learning [j].
+\emph{journal of clinical microbiology}, v.~2, p. 199--228, 2001.}
+
+\bibitem[Breiman et al. 1984]{breiman1984classification}
+\abntrefinfo{Breiman et al.}{BREIMAN et al.}{1984}
+{BREIMAN, L. et al. \emph{Classification and Regression Trees}. [S.l.]: Taylor
+  \& Francis, 1984.  (The Wadsworth and Brooks-Cole statistics-probability
+  series).
+ISBN 9780412048418.}
+
+\bibitem[Brito et al. 2022]{brito2022explainable}
+\abntrefinfo{Brito et al.}{BRITO et al.}{2022}
+{BRITO, L.~C. et al. An explainable artificial intelligence approach for
+  unsupervised fault detection and diagnosis in rotating machinery.
+\emph{Mechanical Systems and Signal Processing}, Elsevier, v.~163, p. 108105,
+  2022.}
+
+\bibitem[Brynjolfsson e McAfee 2011]{brynjolfsson2011race}
+\abntrefinfo{Brynjolfsson e McAfee}{BRYNJOLFSSON; MCAFEE}{2011}
+{BRYNJOLFSSON, E.; MCAFEE, A. \emph{Race against the machine: How the digital
+  revolution is accelerating innovation, driving productivity, and irreversibly
+  transforming employment and the economy}. [S.l.]: Brynjolfsson and McAfee,
+  2011.}
+
+\bibitem[Campbell et al. 2018]{campbell2018differentially}
+\abntrefinfo{Campbell et al.}{CAMPBELL et al.}{2018}
+{CAMPBELL, Z. et al. Differentially private anova testing. In:  IEEE.
+  \emph{2018 1st International Conference on Data Intelligence and Security
+  (ICDIS)}. [S.l.], 2018. p. 281--285.}
+
+\bibitem[Chen e Jeong 2007]{chen2007enhanced}
+\abntrefinfo{Chen e Jeong}{CHEN; JEONG}{2007}
+{CHEN, X.-w.; JEONG, J.~C. Enhanced recursive feature elimination. In:  IEEE.
+  \emph{Sixth international conference on machine learning and applications
+  (ICMLA 2007)}. [S.l.], 2007. p. 429--435.}
+
+\bibitem[Ding et al. 2014]{ding2014identification}
+\abntrefinfo{Ding et al.}{DING et al.}{2014}
+{DING, H. et al. Identification of bacteriophage virion proteins by the anova
+  feature selection and analysis.
+\emph{Molecular BioSystems}, Royal Society of Chemistry, v.~10, n.~8, p.
+  2229--2235, 2014.}
+
+\bibitem[Doan, Jeong e Ji 2020]{doan2020designing}
+\abntrefinfo{Doan, Jeong e Ji}{DOAN; JEONG; JI}{2020}
+{DOAN, D.~M.; JEONG, D.~H.; JI, S.-Y. Designing a feature selection technique
+  for analyzing mixed data. In:  IEEE. \emph{2020 10th Annual Computing and
+  Communication Workshop and Conference (CCWC)}. [S.l.], 2020. p. 0046--0052.}
+
+\bibitem[Elkano et al. 2016]{elkano2016fuzzy}
+\abntrefinfo{Elkano et al.}{ELKANO et al.}{2016}
+{ELKANO, M. et al. Fuzzy rule-based classification systems for multi-class
+  problems using binary decomposition strategies: on the influence of
+  n-dimensional overlap functions in the fuzzy reasoning method.
+\emph{Information Sciences}, Elsevier, v.~332, p. 94--114, 2016.}
+
+\bibitem[Elssied, Ibrahim e Osman 2014]{elssied2014novel}
+\abntrefinfo{Elssied, Ibrahim e Osman}{ELSSIED; IBRAHIM; OSMAN}{2014}
+{ELSSIED, N. O.~F.; IBRAHIM, O.; OSMAN, A.~H. A novel feature selection based
+  on one-way anova f-test for e-mail spam classification.
+\emph{Research Journal of Applied Sciences, Engineering and Technology},
+  Maxwell Scientific Publications, v.~7, n.~3, p. 625--638, 2014.}
+
+\bibitem[Fonti e Belitser 2017]{fonti2017feature}
+\abntrefinfo{Fonti e Belitser}{FONTI; BELITSER}{2017}
+{FONTI, V.; BELITSER, E. Feature selection using lasso.
+\emph{VU Amsterdam research paper in business analytics}, Business Analytics
+  Master Amsterdam, The Netherland, v.~30, p. 1--25, 2017.}
+
+\bibitem[Garc{\'\i}a, Pedregal e Roberts 2010]{garcia2010time}
+\abntrefinfo{Garc{\'\i}a, Pedregal e Roberts}{GARC{\'I}A; PEDREGAL;
+  ROBERTS}{2010}
+{GARC{\'I}A, F.~P.; PEDREGAL, D.~J.; ROBERTS, C. Time series methods applied to
+  failure prediction and detection.
+\emph{Reliability Engineering \& System Safety}, Elsevier, v.~95, n.~6, p.
+  698--703, 2010.}
+
+\bibitem[Granitto et al. 2006]{granitto2006recursive}
+\abntrefinfo{Granitto et al.}{GRANITTO et al.}{2006}
+{GRANITTO, P.~M. et al. Recursive feature elimination with random forest for
+  ptr-ms analysis of agroindustrial products.
+\emph{Chemometrics and intelligent laboratory systems}, Elsevier, v.~83, n.~2,
+  p. 83--90, 2006.}
+
+\bibitem[Guyon et al. 2002]{guyon2002mach}
+\abntrefinfo{Guyon et al.}{GUYON et al.}{2002}
+{GUYON, I. et al. Mach learn 46: 389. doi: 10.1023.
+\emph{A: 1012487302797}, 2002.}
+
+\bibitem[Karabulut, {\"O}zel e Ibrikci 2012]{karabulut2012comparative}
+\abntrefinfo{Karabulut, {\"O}zel e Ibrikci}{KARABULUT; {\"O}ZEL; IBRIKCI}{2012}
+{KARABULUT, E.~M.; {\"O}ZEL, S.~A.; IBRIKCI, T. A comparative study on the
+  effect of feature selection on classification accuracy.
+\emph{Procedia Technology}, Elsevier, v.~1, p. 323--327, 2012.}
+
+\bibitem[Kraskov, St{\"o}gbauer e Grassberger 2011]{kraskov2011erratum}
+\abntrefinfo{Kraskov, St{\"o}gbauer e Grassberger}{KRASKOV; ST{\"O}GBAUER;
+  GRASSBERGER}{2011}
+{KRASKOV, A.; ST{\"O}GBAUER, H.; GRASSBERGER, P. Erratum: estimating mutual
+  information [phys. rev. e 69, 066138 (2004)].
+\emph{Physical Review E}, APS, v.~83, n.~1, p. 019903, 2011.}
+
+\bibitem[Li et al. 2020]{li2020multiclass}
+\abntrefinfo{Li et al.}{LI et al.}{2020}
+{LI, Q. et al. Multiclass imbalanced learning with one-versus-one decomposition
+  and spectral clustering.
+\emph{Expert Systems with Applications}, Elsevier, v.~147, p. 113152, 2020.}
+
+\bibitem[Lundberg e Lee 2017]{lundberg2017unified}
+\abntrefinfo{Lundberg e Lee}{LUNDBERG; LEE}{2017}
+{LUNDBERG, S.~M.; LEE, S.-I. A unified approach to interpreting model
+  predictions.
+\emph{Advances in neural information processing systems}, v.~30, 2017.}
+
+\bibitem[Mohammed, Khan e Bashier 2016]{mohammed2016machine}
+\abntrefinfo{Mohammed, Khan e Bashier}{MOHAMMED; KHAN; BASHIER}{2016}
+{MOHAMMED, M.; KHAN, M.~B.; BASHIER, E. B.~M. \emph{Machine learning:
+  algorithms and applications}. [S.l.]: Crc Press, 2016.}
+
+\bibitem[Myles et al. 2004]{myles2004introduction}
+\abntrefinfo{Myles et al.}{MYLES et al.}{2004}
+{MYLES, A.~J. et al. An introduction to decision tree modeling.
+\emph{Journal of Chemometrics: A Journal of the Chemometrics Society}, Wiley
+  Online Library, v.~18, n.~6, p. 275--285, 2004.}
+
+\bibitem[Neupane e Seok 2020]{neupane2020bearing}
+\abntrefinfo{Neupane e Seok}{NEUPANE; SEOK}{2020}
+{NEUPANE, D.; SEOK, J. Bearing fault detection and diagnosis using case western
+  reserve university dataset with deep learning approaches: A review.
+\emph{IEEE Access}, IEEE, v.~8, p. 93155--93178, 2020.}
+
+\bibitem[Pal 2005]{pal2005random}
+\abntrefinfo{Pal}{PAL}{2005}
+{PAL, M. Random forest classifier for remote sensing classification.
+\emph{International journal of remote sensing}, Taylor \& Francis, v.~26, n.~1,
+  p. 217--222, 2005.}
+
+\bibitem[Pawara et al. 2020]{pawara2020one}
+\abntrefinfo{Pawara et al.}{PAWARA et al.}{2020}
+{PAWARA, P. et al. One-vs-one classification for deep neural networks.
+\emph{Pattern Recognition}, Elsevier, v.~108, p. 107528, 2020.}
+
+\bibitem[Pereira, Mitchell e Botvinick 2009]{pereira2009machine}
+\abntrefinfo{Pereira, Mitchell e Botvinick}{PEREIRA; MITCHELL; BOTVINICK}{2009}
+{PEREIRA, F.; MITCHELL, T.; BOTVINICK, M. Machine learning classifiers and
+  fmri: a tutorial overview.
+\emph{Neuroimage}, Elsevier, v.~45, n.~1, p. S199--S209, 2009.}
+
+\bibitem[Ray 2019]{ray2019quick}
+\abntrefinfo{Ray}{RAY}{2019}
+{RAY, S. A quick review of machine learning algorithms. In:  IEEE. \emph{2019
+  International conference on machine learning, big data, cloud and parallel
+  computing (COMITCon)}. [S.l.], 2019. p. 35--39.}
+
+\bibitem[Reppa e Tzes 2011]{reppa2011fault}
+\abntrefinfo{Reppa e Tzes}{REPPA; TZES}{2011}
+{REPPA, V.; TZES, A. Fault detection and diagnosis based on parameter set
+  estimation.
+\emph{IET control theory \& applications}, IET, v.~5, n.~1, p. 69--83, 2011.}
+
+\bibitem[Richhariya et al. 2020]{richhariya2020diagnosis}
+\abntrefinfo{Richhariya et al.}{RICHHARIYA et al.}{2020}
+{RICHHARIYA, B. et al. Diagnosis of alzheimer's disease using universum support
+  vector machine based recursive feature elimination (usvm-rfe).
+\emph{Biomedical Signal Processing and Control}, Elsevier, v.~59, p. 101903,
+  2020.}
+
+\bibitem[Saufi et al. 2019]{saufi2019challenges}
+\abntrefinfo{Saufi et al.}{SAUFI et al.}{2019}
+{SAUFI, S.~R. et al. Challenges and opportunities of deep learning models for
+  machinery fault detection and diagnosis: A review.
+\emph{Ieee Access}, IEEE, v.~7, p. 122644--122662, 2019.}
+
+\bibitem[Shams e Barnes 2007]{shams2007speeding}
+\abntrefinfo{Shams e Barnes}{SHAMS; BARNES}{2007}
+{SHAMS, R.; BARNES, N. Speeding up mutual information computation using nvidia
+  cuda hardware. In:  IEEE. \emph{9th Biennial Conference of the Australian
+  Pattern Recognition Society on Digital Image Computing Techniques and
+  Applications (DICTA 2007)}. [S.l.], 2007. p. 555--560.}
+
+\bibitem[Shao et al. 2017]{shao2017new}
+\abntrefinfo{Shao et al.}{SHAO et al.}{2017}
+{SHAO, Z. et al. A new electricity price prediction strategy using mutual
+  information-based svm-rfe classification.
+\emph{Renewable and Sustainable Energy Reviews}, Elsevier, v.~70, p. 330--341,
+  2017.}
+
+\bibitem[Sheikhan, Bejani e Gharavian 2013]{sheikhan2013modular}
+\abntrefinfo{Sheikhan, Bejani e Gharavian}{SHEIKHAN; BEJANI; GHARAVIAN}{2013}
+{SHEIKHAN, M.; BEJANI, M.; GHARAVIAN, D. Modular neural-svm scheme for speech
+  emotion recognition using anova feature selection method.
+\emph{Neural Computing and Applications}, Springer, v.~23, p. 215--227, 2013.}
+
+\bibitem[Tourassi et al. 2001]{tourassi2001application}
+\abntrefinfo{Tourassi et al.}{TOURASSI et al.}{2001}
+{TOURASSI, G.~D. et al. Application of the mutual information criterion for
+  feature selection in computer-aided diagnosis.
+\emph{Medical physics}, Wiley Online Library, v.~28, n.~12, p. 2394--2402,
+  2001.}
+
+\bibitem[Utama et al. 2023]{utama2023explainable}
+\abntrefinfo{Utama et al.}{UTAMA et al.}{2023}
+{UTAMA, C. et al. Explainable artificial intelligence for photovoltaic fault
+  detection: A comparison of instruments.
+\emph{Solar Energy}, Elsevier, v.~249, p. 139--151, 2023.}
+
+\bibitem[Vergara 2014]{vergara2014vergara}
+\abntrefinfo{Vergara}{VERGARA}{2014}
+{VERGARA, E. Vergara jr, est{\'e}vez pa.
+\emph{A review of feature selection methods based on mutual information, Neural
+  Computing and Applications}, v.~24, n.~1, p. 175--186, 2014.}
+
+\bibitem[Verron, Tiplica e Kobi 2008]{verron2008fault}
+\abntrefinfo{Verron, Tiplica e Kobi}{VERRON; TIPLICA; KOBI}{2008}
+{VERRON, S.; TIPLICA, T.; KOBI, A. Fault detection and identification with a
+  new feature selection based on mutual information.
+\emph{Journal of Process Control}, Elsevier, v.~18, n.~5, p. 479--490, 2008.}
+
+\bibitem[Wang et al. 2016]{wang2016wind}
+\abntrefinfo{Wang et al.}{WANG et al.}{2016}
+{WANG, L. et al. Wind turbine gearbox failure identification with deep neural
+  networks.
+\emph{IEEE Transactions on Industrial Informatics}, IEEE, v.~13, n.~3, p.
+  1360--1368, 2016.}
+
+\bibitem[Zhang et al. 2019]{zhang2019multi}
+\abntrefinfo{Zhang et al.}{ZHANG et al.}{2019}
+{ZHANG, C. et al. Multi-imbalance: An open-source software for multi-class
+  imbalance learning.
+\emph{Knowledge-Based Systems}, Elsevier, v.~174, p. 137--143, 2019.}
+
+\bibitem[Zhang et al. 2018]{zhang2018hybrid}
+\abntrefinfo{Zhang et al.}{ZHANG et al.}{2018}
+{ZHANG, C. et al. A hybrid mlp-cnn classifier for very fine resolution remotely
+  sensed image classification.
+\emph{ISPRS Journal of Photogrammetry and Remote Sensing}, Elsevier, v.~140, p.
+  133--144, 2018.}
+
+\bibitem[Zhou et al. 2021]{zhou2021landslide}
+\abntrefinfo{Zhou et al.}{ZHOU et al.}{2021}
+{ZHOU, X. et al. Landslide susceptibility mapping using hybrid random forest
+  with geodetector and rfe for factor optimization.
+\emph{Geoscience Frontiers}, Elsevier, v.~12, n.~5, p. 101211, 2021.}
+
+\end{thebibliography}

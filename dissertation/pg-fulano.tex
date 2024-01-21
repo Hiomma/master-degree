@@ -1,0 +1,523 @@
+% ==============================================================================
+% Modelo para Monografia de Projeto de Graduação (PG)
+% Agradecimentos: Prof. Vítor E. Silva Souza - Nemo / DI / UFES
+%
+% Baseado em abtex2-modelo-trabalho-academico.tex, v-1.9.2 laurocesar
+% Copyright 2012-2014 by abnTeX2 group at http://abntex2.googlecode.com/ 
+%
+% This work may be distributed and/or modified under the conditions of the LaTeX 
+% Project Public License, either version 1.3 of this license or (at your option) 
+% any later version. The latest version of this license is in
+% http://www.latex-project.org/lppl.txt.
+%
+% IMPORTANTE:
+% Instruções encontram-se espalhadas pelo documento. Para facilitar sua leitura,
+% tais instruções são precedidas por (*) -- utilize a função localizar do seu
+% editor para passar por todas elas.
+% ==============================================================================
+
+% Usa o estilo abntex2, configurando detalhes de formatação e hifenização.
+\documentclass[
+	12pt,				% Tamanho da fonte.
+	openright,			% Capítulos começam em página ímpar (insere página vazia caso preciso).
+	oneside,			% Para impressão em verso e anverso. Oposto a oneside.
+	a4paper,			% Tamanho do papel.
+	english,			% Idioma adicional para hifenização.
+	french,				% Idioma adicional para hifenização.
+	spanish,			% Idioma adicional para hifenização.
+	brazil				% O último idioma é o principal do documento.
+	]{abntex2}
+
+
+% Controle das cores.
+\usepackage[usenames,dvipsnames]{xcolor}
+
+%%% Importação de pacotes. %%%
+
+\usepackage{forest}
+
+% Conserta o erro "No room for a new \count"
+\usepackage{etex}
+%\reserveinserts{28}
+
+% Usa a fonte Latin Modern.
+\usepackage{lmodern}
+
+% Seleção de códigos de fonte.
+\usepackage[T1]{fontenc}
+
+% Codificação do documento em Unicode.
+\usepackage[utf8]{inputenc}
+
+% Usado pela ficha catalográfica.
+\usepackage{lastpage}
+
+% Indenta o primeiro parágrafo de cada seção.
+\usepackage{indentfirst}
+
+% Inclusão de gráficos.
+\usepackage{graphicx}
+
+% Inclusão de páginas em PDF diretamente no documento (para uso nos apêndices).
+\usepackage{pdfpages}
+
+% Para melhorias de justificação.
+\usepackage{microtype}
+
+\usepackage{pstricks,pst-plot,fp}
+\usepackage{pstricks-add}
+\usepackage{auto-pst-pdf}
+\usepackage{subfiles}
+
+% Citações padrão ABNT.
+\usepackage[brazilian,hyperpageref]{backref}
+\usepackage[alf]{abntex2cite}	
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}		% Usado sem a opção hyperpageref de backref.
+\renewcommand{\backref}{}										% Texto padrão antes do número das páginas.
+\renewcommand*{\backrefalt}[4]{									% Define os textos da citação.
+	\ifcase #1
+		Nenhuma citação no texto.
+	\or
+		Citado na página #2.
+	\else
+		Citado #1 vezes nas páginas #2.
+	\fi}
+
+% \rm is deprecated and should not be used in a LaTeX2e document
+% http://tex.stackexchange.com/questions/151897/always-textrm-never-rm-a-counterexample
+\renewcommand{\rm}{\textrm}
+
+% Pacotes não incluídos no template abntex2. 
+% Podem ser comentados caso não queira utilizá-los.
+
+% Inclusão de símbolos não padrão.
+\usepackage{amssymb}
+\usepackage{eurosym}
+
+% Para utilizar \eqref para referenciar equações.
+\usepackage{amsmath}
+
+% Permite mostrar figuras muito largas em modo paisagem com \begin{sidewaysfigure} ao invés de \begin{figure}.
+\usepackage{rotating}
+
+% Permite customizar listas enumeradas/com marcadores.
+\usepackage{enumitem}
+
+% Permite inserir hiperlinks com \url{}.
+\usepackage{bigfoot}
+\usepackage{hyperref}
+
+% Permite usar o comando \hl{} para evidenciar texto com fundo amarelo. Útil para chamar atenção a itens a fazer.
+\usepackage{soulutf8}
+
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+% Colorinlistoftodos package: to insert colored comments so authors can collaborate on the content.
+\usepackage[colorinlistoftodos, textwidth=20mm, textsize=footnotesize]{todonotes}
+\newcommand{\aluno}[1]{\todo[author=\textbf{Aluno},color=green!30,caption={},inline]{#1}}
+\newcommand{\professor}[1]{\todo[author=\textbf{Professor},color=red!30,caption={},inline]{#1}}
+
+% Permite inserir espaço em branco condicional (incluído no texto final só se necessário) em macros.
+\usepackage{xspace}
+
+% Permite incluir listagens de código com o comando \lstinputlisting{}.
+\usepackage{listings}
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\renewcommand{\lstlistingname}{Listagem}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\lstset{
+	basicstyle=\scriptsize,
+	breaklines=true,
+	numbers=left,
+	numbersep=5pt,
+	numberstyle=\tiny\color{mygray}, 
+	rulecolor=\color{black},
+	showstringspaces=false,
+	tabsize=2,
+    inputencoding=utf8,
+    extendedchars=true,
+    literate=%
+    {é}{{\'{e}}}1
+    {è}{{\`{e}}}1
+    {ê}{{\^{e}}}1
+    {ë}{{\¨{e}}}1
+    {É}{{\'{E}}}1
+    {Ê}{{\^{E}}}1
+    {û}{{\^{u}}}1
+    {ù}{{\`{u}}}1
+    {â}{{\^{a}}}1
+    {à}{{\`{a}}}1
+    {á}{{\'{a}}}1
+    {ã}{{\~{a}}}1
+    {Á}{{\'{A}}}1
+    {Â}{{\^{A}}}1
+    {Ã}{{\~{A}}}1
+    {ç}{{\c{c}}}1
+    {Ç}{{\c{C}}}1
+    {õ}{{\~{o}}}1
+    {ó}{{\'{o}}}1
+    {ô}{{\^{o}}}1
+    {Õ}{{\~{O}}}1
+    {Ó}{{\'{O}}}1
+    {Ô}{{\^{O}}}1
+    {î}{{\^{i}}}1
+    {Î}{{\^{I}}}1
+    {í}{{\'{i}}}1
+    {Í}{{\~{Í}}}1
+}
+
+
+
+%%% Definição de variáveis. %%%
+
+% (*) Substituir os textos abaixo com as informações apropriadas.
+\titulo{Classificadores especializados com seleção de atributos SHAP: aplicação no processo Tennessee Eastman e Reator-tanque Agitado Contínuo (CSTR)}
+\autor{Gabriel dos Santos Sereno}
+\local{Vitória, ES}
+\data{2023}
+\orientador{Prof. Dr. Thomas Walter Rauber}
+\coorientador{Prof. Dr. Celso José Munaro}
+\instituicao{
+  Universidade Federal do Espírito Santo -- UFES
+  \par
+  Centro Tecnológico
+  \par
+  Colegiado do Curso de Engenharia de Computação}
+\tipotrabalho{Monografia (PG)}
+
+% Preâmbulo (tipo do trabalho, objetivo, nome da instituição, área de concentração, etc.).
+% (*) Verificar se está correto (ex.: substituir por Engenharia de Computação se for o caso).
+\preambulo{Dissertação apresentada ao Curso de Inteligência Artificial do Departamento de Informática da Universidade Federal do Espírito Santo, como requisito parcial para obtenção do Grau de Mestre em Inteligência Artificial.}
+
+% Macros específicas do trabalho.
+% (*) Inclua aqui termos que são utilizados muitas vezes e que demandam formatação especial.
+% Os exemplos abaixo incluem i* (substituindo o asterisco por uma estrela) e Java com TM em superscript.
+% Use sempre \xspace para que o LaTeX inclua espaço em branco após a macro somente quando necessário.
+\newcommand{\istar}{\textit{i}$^\star$\xspace}
+\newcommand{\java}{Java\texttrademark\xspace}
+\newcommand{\latex}{\LaTeX\xspace}
+
+
+
+
+%%% Configurações finais de aparência. %%%
+
+% Altera o aspecto da cor azul.
+\definecolor{blue}{RGB}{41,5,195}
+
+% Informações do PDF.
+\makeatletter
+\hypersetup{
+	pdftitle={\@title}, 
+	pdfauthor={\@author},
+	pdfsubject={\imprimirpreambulo},
+	pdfcreator={LaTeX with abnTeX2},
+	pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
+	colorlinks=true,				% Colore os links (ao invés de usar caixas).
+	linkcolor=blue,					% Cor dos links.
+	citecolor=blue,					% Cor dos links na bibliografia.
+	filecolor=magenta,				% Cor dos links de arquivo.
+	urlcolor=blue,					% Cor das URLs.
+	bookmarksdepth=4
+}
+\makeatother
+
+% Espaçamentos entre linhas e parágrafos.
+\setlength{\parindent}{1.3cm}
+\setlength{\parskip}{0.2cm}
+
+
+
+%%% Páginas iniciais do documento: capa, folha de rosto, ficha, resumo, tabelas, etc. %%%
+
+% Compila o índice.
+\makeindex
+
+% Inicia o documento.
+\begin{document}
+
+
+\begin{figure}
+  \centering
+  \includegraphics[width=.20\textwidth]{figuras/brasao.jpg}
+  \label{fig-brasao}
+\end{figure}
+
+\begin{center}
+  \textbf{\textsf{UNIVERSIDADE FEDERAL DO ESPÍRITO SANTO}}
+
+  \textbf{\textsf{CENTRO TECNOLÓGICO}}
+
+  \textbf{\textsf{COLEGIADO DO CURSO DE ENGENHARIA DE COMPUTAÇÃO}}
+
+  \large{\textbf{\textsf{  }}}
+
+  \large{\textbf{\textsf{  }}}
+\end{center}
+
+% Retira espaço extra obsoleto entre as frases.
+\frenchspacing
+
+% Capa do trabalho.
+\imprimircapa
+
+% Folha de rosto (o * indica que haverá a ficha bibliográfica).
+\imprimirfolhaderosto*
+
+
+% Ficha catalográfica.
+% (*) Escolher entre as versões de ficha catalográfica abaixo (comente aquela que não quiser usar).
+
+% Versão 1: caso a biblioteca da sua universidade lhe forneça um PDF (adequar o nome do arquivo).
+% \begin{fichacatalografica}
+%     \includepdf{include-fichacatalografica.pdf}
+% \end{fichacatalografica}
+
+% Versão 2: caso você tenha que inserir sua própria ficha catalográfica.
+% (*) Neste caso, preencher palavras-chave e adicione co-orientador (se houver).
+\begin{fichacatalografica}
+  \vspace*{\fill}
+  \hrule
+  \begin{center}
+    \begin{minipage}[c]{12.5cm}
+
+      \imprimirautor
+
+      \hspace{0.5cm} \imprimirtitulo  / \imprimirautor. --
+      \imprimirlocal, \imprimirdata-
+
+      \hspace{0.5cm} \pageref{LastPage} p. : il. (algumas color.) ; 30 cm.\\
+
+      \hspace{0.5cm} \imprimirorientadorRotulo~\imprimirorientador\\
+
+      \hspace{0.5cm}
+      \parbox[t]{\textwidth}{\imprimirtipotrabalho~--~\imprimirinstituicao,
+        \imprimirdata.}\\
+
+      \hspace{0.5cm}
+      1. Diagnóstico de falhas.
+      2. Seleção de Características.
+      3. Seleção SHAP.
+      4. Processo Tennessee Eastman.
+      5. Classificadores especializados.
+      I. Rauber, Thomas Walter.
+      II. Universidade Federal do Espírito Santo.
+      IV. \imprimirtitulo \\
+
+      \hspace{8.75cm} CDU 02:141:005.7\\
+
+    \end{minipage}
+  \end{center}
+  \hrule
+\end{fichacatalografica}
+
+
+% Folha de aprovação.
+% (*) Escolher entre as versões de ficha catalográfica abaixo (comente aquela que não quiser usar).
+
+% Versão 1: cópia digitalizada da folha de aprovação assinada pela banca.
+% \includepdf{include-folhadeaprovacao.pdf}
+
+% Versão 2: folha de aprovação em branco.
+% (*) Ajustar a data e os nomes dos participantes da banca.
+\begin{folhadeaprovacao}
+  \begin{center}
+    {\ABNTEXchapterfont\large\imprimirautor}
+    \vspace*{\fill}\vspace*{\fill}
+    \begin{center}
+      \ABNTEXchapterfont\bfseries\Large\imprimirtitulo
+    \end{center}
+    \vspace*{\fill}
+    \hspace{.45\textwidth}
+    \begin{minipage}{.5\textwidth}
+      \imprimirpreambulo
+    \end{minipage}%
+    \vspace*{\fill}
+  \end{center}
+  Trabalho aprovado. \imprimirlocal, 25 de setembro de 2023:
+  \assinatura{\textbf{\imprimirorientador} \\ Orientador}
+  \assinatura{\textbf{Professor} \\ Convidado 1}
+  \assinatura{\textbf{Professor} \\ Convidado 2}
+  %\assinatura{\textbf{Professor} \\ Convidado 3}
+  %\assinatura{\textbf{Professor} \\ Convidado 4}
+  \begin{center}
+    \vspace*{0.5cm}
+    {\large\imprimirlocal}
+    \par
+    {\large\imprimirdata}
+    \vspace*{1cm}
+  \end{center}
+\end{folhadeaprovacao}
+
+
+% Dedicatória.
+% (*) Escrever dedicatória ou remover/comentar seção.
+% \begin{dedicatoria}
+%    \vspace*{\fill}
+%    \centering
+%    \noindent
+%    \textit{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis malesuada laoreet leo at interdum. Nullam neque eros, dignissim sed ipsum sed, sagittis laoreet nisi.} \vspace*{\fill}
+% \end{dedicatoria}
+
+
+% Agradecimentos.
+% (*) Escrever agradecimentos ou remover/comentar seção.
+\begin{agradecimentos}
+  Primeiramente agradecer a Deus que me guiou e fez ser quem eu sou e sou muito grato a tudo o que aconteceu em minha vida. Agradeço também principalmente aos meus pais e ao meu irmão que sempre me apoiaram em tudo e me aconselharam em todas as minhas decisões. A minha esposa Maria que me apoiou e me deu forças para enfrentar todos os tipos de barreiras. Ao o meu professor Dr. Thomas Walter Rauber que me ensinou a ser um futuro mestre e pelo direcionamento para
+  desenvolver esse estudo. Ao Dr. Celso José Munaro que também fez parte desse estudo, o meu muito obrigado. Por fim, agradeço a UFES pela oportunidade e também por toda estrutura para o apoio ao estudante.
+\end{agradecimentos}
+
+
+% Epígrafe.
+% (*) Escrever epígrafe ou remover/comentar seção.
+\begin{epigrafe}
+  \vspace*{\fill}
+  \begin{flushright}
+    \textit{``Quem não vive para servir não serve para viver.''\\
+      (Autor Desconhecido)}
+  \end{flushright}
+\end{epigrafe}
+
+
+% Resumo em português.
+% (*) Escrever resumo e palavras-chave.
+\setlength{\absparsep}{18pt}
+\begin{resumo}
+
+  Nesse estudo, classificadores especializados são treinados utilizando o método de seleção de característica SHAP no objetivo de identificar falhas nos processos industriais. Nesse contexto, os classificadores recebem dados de entradas a partir da decomposição do problema multi-classe utilizando a técnica One-vs-All. Essa metodologia foi empregada em dois benchmarks muito utilizados no meio academico: Processo Tennessee Eastman e o Reator-tanque Agitado Contínuo. O método SHAP obteve um desempenho de aproximadamente 89\% na métrica F1-score no Processo Tennessee Eastman, selecionando em torno de 4 características em média por falha. Já no Reator-tanque Agitado Contínuo, o algoritmo obteve 90\% na métrica F1-score e selecionou cerca de 3 características em média por falha. Apesar do estudo mostrar que o método Recursive Feature Elimination (RFE) obteve resultados parecidos em comparação ao SHAP em ambos os benchmarks. Entretanto, o método RFE tende a selecionar mais características para ter o mesmo desempenho. Por fim, o estudo sugere que o SHAP pode reduzir a dimensionalidade da base de dados com um bom desempenho na métrica F1-Score, podendo ser utilizado na área industrial e acadêmica.
+
+  \textbf{Palavras-chaves}: Diagnóstico de Falhas. Seleção de Características. SHAP. Processo Tennessee Eastman. Reator-tanque Agitado Contínuo. Classificadores Especializados.
+\end{resumo}
+
+% Insere lista de ilustrações.
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+\cleardoublepage
+
+% Insere lista de tabelas.
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+\cleardoublepage
+
+% Lista de abreviaturas e siglas.
+% (*) Preencher com as siglas usadas ao longo do texto e seus significados.
+% \begin{siglas}
+%   \item[UML] Unified Modeling Language
+% \end{siglas}
+
+% Insere o sumário.
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+
+
+
+%%% Início da parte de conteúdo do documento. %%%
+
+% Marca o início dos elementos textuais.
+\textual
+
+% Inclusão dos capítulos.
+% (*) Para facilitar a organização, os capítulos foram divididos em arquivo separados e colocados dentro da.
+% pasta capitulos/. Caso o aluno prefira trabalhar com um só arquivo, basta substituir os comandos \include 
+% pelos conteúdos dos arquivos que estão sendo incluídos, excluindo a pasta capitulos/ em seguida.
+\subfile{capitulos/ch1-introducao}
+\subfile{capitulos/ch2-referencial}
+\subfile{capitulos/ch3-requisitos}
+\subfile{capitulos/ch4-projeto}
+\subfile{capitulos/ch5-conclusoes}
+
+%%% Páginas finais do documento: bibliografia e anexos. %%%
+
+% Finaliza a parte no bookmark do PDF para que se inicie o bookmark na raiz e adiciona espaço de parte no sumário.
+\phantompart
+
+% Marca o início dos elementos pós-textuais.
+\postextual
+
+% Referências bibliográficas
+\bibliography{bibliografia}
+
+
+% Apêndices.
+\begin{apendicesenv}
+
+  % Imprime uma página indicando o início dos apêndices.
+  \partapendices
+
+  \begin{table*}[!htbp]
+    \centering
+    \caption{ Relação entre a falha e as características selecionadas pelo SHAP no CSTR (exceto a característica 13) }
+    \begin{tabularx}{\textwidth}{|l|X|X|}
+      \hline\textbf{Falha} & \textbf{Descrição da Falha}                                         & \textbf{Características selecionadas}                                                 \\ \hline
+      2                    & Obstrução na saída do tanque                                        & Contro. de Nível de Saída \newline Tempe. da E. do Líquido de Refri.                  \\\hline
+      3                    & Obstrução no revestimento                                           & Ponto de Ajuste do Líquido de Refri. \newline Pressão da Entrada do Líquido de Refri. \\\hline
+      4                    & Vazamento do revestimento para o\newline ambiente                   & Ponto de Ajuste do Líquido de Refri. \newline Vazão do Liquido de Refrigeração        \\\hline
+      5                    & Vazamento do revestimento para o\newline tanque                     & Vazão do Liquido de Refrigeração                                                      \\\hline
+      6                    & Vazamento da bomba                                                  & Contro. de Nível de Saída \newline Vazão do Produto                                   \\\hline
+      7                    & Perda de pressão na bomba                                           & Contro. de Nível de Saída                                                             \\\hline
+      8                    & Incrustação na superfície de\newline troca de calor do revestimento & Temperatura do Reator \newline Ponto de Ajuste do Líquido de Refri.                   \\\hline
+      10                   & Energia de ativação da reação primária                              & Concentração do Produto A \newline Ponto de Ajuste do Líquido de Refri.               \\\hline
+      12                   & Vazão de alimentação anormal                                        & Ponto de Ajuste do Líquido de Refri. \newline Contro. de Nível de Saída               \\\hline
+      13                   & Temperatura de alimentação anormal                                  & Temperatura da entrada \newline Ponto de Ajuste do Líquido de Refri.                  \\\hline
+      14                   & Concentração de alimentação anormal                                 & Ponto de Ajuste do Líquido de Refri. \newline Vazão do Liquido de Refrigeração        \\\hline
+      15                   & Temperatura anormal da água de\newline resfriamento                 & Ponto de Ajuste do Líquido de Refri.                                                  \\\hline
+      16                   & Pressão anormal da água de resfriamento                             & Pressão da Entrada do Líquido de Refri. \newline Concentração de entrada              \\\hline
+      19                   & Ponto de ajuste anormal do controlador de nível                     & Nível do reator \newline Concentração do Produto A                                    \\\hline
+    \end{tabularx}
+    \label{tbl-failure-feature-cstr}
+  \end{table*}
+
+  \begin{table*}[!htbp]
+    \centering
+    \caption{ Relação entre a falha e as características selecionadas pelo SHAP no processo Tennessee Eastman }
+    \begin{tabularx}{\textwidth}{|l|X|X|}
+      \hline
+      \textbf{\textbf{Falha}} & \textbf{\textbf{Descrição da Falha}}                  & \textbf{\textbf{Características selecionadas}}                                           \\ \hline
+      1                       & Razão de alimentação A/C                              & Alimentação do reagente A (fluxo 1) \newline Vazão de reagente A (fluxo 1)               \\ \hline
+      2                       & Composição de B                                       & Taxa de purga (fluxo 9) \newline Válvula de purga (fluxo 9)                              \\ \hline
+      3                       & Temperatura de alimentação de D                       & Válvula de vapor do removedor \newline Componente E                                      \\ \hline
+      4                       & Temperatura de entrada do refrigerante do reator      & Vazão de refrigerante do reator \newline Temperatura do removedor                        \\ \hline
+      5                       & Temperatura de entrada do refrigerante do condensador & Vazão de refrigerante do condensador \newline Fluxo do removedor (fluxo 11)              \\ \hline
+      6                       & Perda de alimentação de A                             & Vazão de reagente A (fluxo 1)                                                            \\ \hline
+      7                       & Redução na disponibilidade de C                       & Vazão dos reagentes A e C (fluxo 4) \newline Válvula de vapor do removedor               \\ \hline
+      8                       & Composição de alimentação de A, B e C                 & Válvula de vapor do removedor \newline Componente E                                      \\ \hline
+      9                       & Temperatura de alimentação de D                       & Válvula de vapor do removedor \newline Componente E                                      \\ \hline
+      10                      & Temperatura de alimentação de C                       & Vazão de gás do removedor \newline Válvula de vapor do removedor                         \\ \hline
+      11                      & Temperatura de entrada do refrigerante do reator      & Vazão de refrigerante do reator \newline Temperatura do reator                           \\ \hline
+      12                      & Temperatura de entrada do refrigerante do condensador & Válvula de vapor do removedor \newline Componente E                                      \\ \hline
+      13                      & Cinética das reações                                  & Vazão de gás do removedor \newline Válvula de vapor do removedor                         \\ \hline
+      14                      & Válvula do Reator da Água de Refrigeração             & Temperatura do reator \newline Temperatura de saída do refrigerante do reator            \\ \hline
+      15                      & Válvula do Condensador da Água de Refrigeração        & Temperatura do removedor \newline Vazão de gás do removedor                              \\ \hline
+      16                      & Desconhecido                                          & Válvula de vapor do removedor \newline Vazão de gás do removedor                         \\ \hline
+      17                      & Desconhecido                                          & Temperatura de saída do refrigerante do reator \newline Temperatura do reator            \\ \hline
+      18                      & Desconhecido                                          & Temperatura de saída do refrigerante do separador \newline Válvula de vapor do removedor \\ \hline
+      19                      & Desconhecido                                          & Vazão de reciclagem (fluxo 8) \newline Válvula do compressor                             \\ \hline
+      20                      & Desconhecido                                          & Válvula do compressor \newline Pressão do separador                                      \\ \hline
+      21                      & Válvula (Stream 4)                                    & Vazão dos reagentes A e C (fluxo 4)                                                      \\ \hline
+    \end{tabularx}
+    \label{tbl-failure-feature-tep}
+  \end{table*}
+
+  % (*) Incluir como apêndice a documentação técnica produzida durante o PG (especificação de requisitos,
+  % projeto arquitetural, etc.). Utilizar o exemplo \includepdf caso o documento seja produzido em outro
+  % editor de texto (Microsoft Word, LibreOffice Writer) e transformado em PDF. Utilizar o exemplo \include
+  % caso os documentos tenham sido também escritos em LaTeX.
+  % \includepdf[pages={1-}]{apendices/apendice01-requisitos.pdf}
+  % \includepdf[pages={1-}]{apendices/apendice02-projeto.pdf}
+  % \include{ap1-requisitos}
+  % \include{ap2-projeto}
+\end{apendicesenv}
+
+
+
+% Índice remissivo.
+\phantompart
+\printindex
+
+% Fim do documento.
+\end{document}

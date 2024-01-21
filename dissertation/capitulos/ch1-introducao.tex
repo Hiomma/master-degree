@@ -1,0 +1,37 @@
+% ==============================================================================
+% TCC - Gabriel dos Santos Sereno
+% Capítulo 1 - Introdução
+% ==============================================================================
+\chapter{Introdução}
+\label{sec-intro}
+
+Com o constante avanço tecnológico na área industrial, progressivamente o número de máquinas e processos para produzir um produto aumenta substancialmente \cite{brynjolfsson2011race}. Em decorrência disso, o custo de manutenção também cresce, tornando menos lucrativo todo o processo industrial.
+
+Dessa forma, a predição, detecção e identificação de falhas torna-se de suma importância, já que com menos investimento pode-se prevenir gastos exorbitantes com consertos de máquinas caras que tem um papel importante no processo industrial \cite{garcia2010time}.
+
+A área de detecção e diagnóstico de falhas tem como objetivo em analisar componentes industriais em busca de falhas e determinar o instante que o ocorreu. Além disso, com a detecção dessa falha, o diagnóstico pode ser aplicado para investigar a causa do problema e também a sua magnitude \cite{reppa2011fault}.
+
+Nesse contexto, algoritmos que detectam previamente a ocorrência de uma falha requerem dados uteis para desempenhar sua função corretamente. Entretanto, uma máquina ou um processo industrial em sua complexidade. Portanto, a seleção dos melhores dados contribui para o aumento da taxa de detecção dessas falhas \cite{karabulut2012comparative}.
+
+Desse modo, o presente estudo propõe a utilização do algoritmo Shapley Value Framework (SHAP), na qual seleciona as melhores características presentes em uma base de dados de acordo com a sua formula que calcula os valores Shapley \cite{lundberg2017unified}. Esses valores são produzidos baseados no modelo, ou seja, o SHAP é um algoritmo post-hoc que utiliza os dados de treinamento gerados pelo modelo para calcular a importância das características com os valores Shapley. Esse algoritmo é focado principalmente na interpretação de modelos caixa-preta, em outras palavras, modelos onde não há conhecimento profundo sobre o seu funcionamento, baseando apenas nos dados de entrada e saída para sua interpretação.
+
+Inicialmente, o SHAP foi criado para a Teoria de Jogos, com o objetivo de calcular o efeito da cooperatividade entre jogadores. Nisso, o estudo trás esse conceito para o meio industrial, para verificar sua efetividade em máquinas de processos químicos como o Tennessee Eastman e o Reator-tanque Agitado Contínuo em conjunto com o classificador Random Forest utilizando a técnica de decomposição, separando a base de dados em classes binárias para aumentar a eficácia da identificação das classes.
+
+Além disso, como o SHAP gera valores de importância para cada característica contida na base de dados baseado no classificador Random Forest, para cada máquina foi criado mapas de calor, bem como tabelas para determinar a relação entre a falha e as características. Com isso, é possível dterminar onde está o problema mesmo se a falha não for conhecida, como acontece no processo Tennessee Eastman.
+
+\section{Objetivos}
+
+Este estudo tem como objetivo reduzir a dimensionalidade desses dados, na qual problemas multi-classe são decompostos em subproblemas de classe binária, bem como encontrar o conjunto de dados  com o melhor desempenho nesse modelo. Com isso, este estudo utiliza o Shapley Value Framework (SHAP) como principal método de seleção de características em conjunto com o modelo Random Forest, além dos dados serem decompostos seguindo a técnica One-vs-All. Para fomentar o poder do algoritmo SHAP nesse modelo, foi feito um comparativo entre o SHAP e  métodos de seleção de características que são relevantes no meio acadêmico e também industrial. São esses métodos: Recursive Feature Elimination (RFE), Selection from Model (SFM), Mutual Information (MI), e o ANOVA F-value.
+
+Os algoritmos de seleção de características foram aplicados em duas bases de dados que são utilizadas como benchmark: Processo Tennessee Eastman e o Reator-tanque Agitado Contínuo. Ambos simulam máquinas em um processo químico, onde é possível alterar suas entradas no intuito de gerar falhas nos componentes.
+
+A ideia do estudo é utilizar os resultados obtidos de ambas as bases para cada método de seleção de característica e analizar a eficiência do SHAP diante a metodologia proposta, tanto em seu desempenho como em sua redução de características utilizadas para detectar uma falha.
+
+O estudo tem como objetivo secundário analizar os valores produzidos pelo SHAP e relacionar as características que tiveram maior importância para o algoritmo em comparação com a falha. Assim é possível verificar se a interpretabilidade é eficiente com o SHAP. Caso essa afirmação seja positiva, o SHAP pode apresentar grande potencial para área industrial, já que será possível verificar qual a intensidade e qual componente está afetando para produzir essa falha, portanto, aumentando a eficácia da manutenção dos equipamentos.
+
+Com esse resultado podemos afirmar que o SHAP pode ser efetivo, principalmente, no meio industrial, já que os estudos iniciaram recentemente, aumentando a partir do ano de 2021. Outros autores fizeram a aplicação do SHAP em outros tipos de máquinas industrias, também com o objetivo de identificar quais componentes desses equipamentos apresentam algum defeito a partir dos resultados do SHAP. Por exemplo, \cite{brito2022explainable} utilizou o SHAP para identificar problemas em máquinas de alta rotação. Já \cite{utama2023explainable} utilizou o SHAP para explicar problemas em máquinas fotovoltaica.
+
+\section{Estrutura da dissertação}
+
+Este trabalho está divido em mais quatro capítulos: No capítulo \ref{sec-referencial} é realizado uma revisão bibliográfica dos algoritmos de seleção de características, bem como o modelo Random Forest e as técnicas de decomposição. Já no capítulo \ref{sec-requisitos} descreve a ideia e a construção do modelo, explicando o passo-a-passo de cada processo até o resultado. No capítulo \ref{sec-projeto} é apresentado a metodologia proposta aplicada a dois estudos de caso e seus resultados.  E por fim, o capítulo \ref{sec-conclusoes} apresenta as considerações finais e também trabalhos futuros.
+

@@ -1,0 +1,1 @@
+gfortran -o cstr2 cstr2.f

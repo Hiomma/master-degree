@@ -1,0 +1,40 @@
+\changetocdepth {4}
+\babel@toc {brazil}{}\relax 
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase []{Introdução}}{10}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Objetivos}{11}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Estrutura da dissertação}{12}{section.1.2}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase []{Referencial Teórico}}{13}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Seleção de Características}{13}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Shapley additive explanations (SHAP)}{13}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Recursive Feature Elimination (RFE)}{15}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Selection from Model (SFM)}{16}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Mutual Information (MI)}{17}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}ANOVA F-Value}{18}{subsection.2.1.5}%
+\contentsline {section}{\numberline {2.2}Classificador}{18}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Decompondo conjuntos de dados multiclasse}{22}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}One-vs-All (OVA)}{22}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}One-vs-One (OVO)}{23}{subsection.2.3.2}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase []{Metodologia da construção do modelo}}{24}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Dados para os classificadores}{24}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Decomposição dos dados multi-classe}{24}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Seleção das características}{25}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Treinamento dos classificadores}{25}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Seleção do melhor classificador}{26}{section.3.5}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase []{Considerações Finais}}{27}{chapter.4}%
+\vspace {\cftbeforechapterskip }
+\vspace {\cftbeforechapterskip }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\contentsline {chapter}{\MakeTextUppercase []{Refer\^encias}}{28}{section*.18}%
+\renewcommand *{\cftappendixname }{AP\^ENDICE \space }
+\setlength {\cftpartindent }{\cftlastnumwidth } \setlength {\cftpartnumwidth }{2em}
+\cftinsert {A}
+\contentsline {part}{\uppercase {Ap\^endices}}{32}{section*.19}%
+\vspace {\cftbeforechapterskip }
